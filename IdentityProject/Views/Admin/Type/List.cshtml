@@ -1,0 +1,40 @@
+﻿@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 50px">ID</th>
+                <th>Tên Thể Loại</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var type in (ViewData["Types"] as IEnumerable<MovieType>))
+            {
+                <tr>
+                    <td>@type.type_id</td>
+                    <td>@type.type_name</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Type"
+                               asp-action="Edit" asp-route-id="@type.type_id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Type"
+                               asp-action="Delete" asp-route-id="@type.type_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                        @*
+                        <a class="btn btn-danger btn-sm" href="#"
+                           onclick="removeRow(\'' . $type->type_id . '\', \'/admin/types/destroy\')">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                        *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        @*{!! $types->links() !!}*@
+    </div>
+}

@@ -1,0 +1,38 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã năm</th>
+                <th>Số năm</th>
+                <th>Tổng số vé</th>
+                <th>Tổng doanh thu</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {!! \App\Helpers\Helper::year($years) !!}
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        {!! $years->links() !!}
+    </div>
+}
+
+public static function year($years){
+        $html = '';
+
+        foreach($years as $key => $year){
+                $html .= '
+<tr>
+    <td>' . $year->yre_id . '</td>
+    <td>' . $year->yre_year . '</td>
+    <td>' . $year->yre_count . '</td>
+    <td>' . $year->yre_value . '</td>
+</tr>
+                ';
+
+                unset($year[$key]);
+        }
+        return $html;
+    }

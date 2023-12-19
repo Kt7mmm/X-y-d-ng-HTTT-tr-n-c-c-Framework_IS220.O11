@@ -132,8 +132,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                //if (Input.cus_gender != "" && Input.cus_name != "" && Input.cus_phone != "" && Input.cus_gender != "")
-                //{
+                
                 if (Input.cus_gender != "" && Input.cus_name != "" && Input.cus_phone != "")
                 {
                     DateTime? cus_dob = Input.cus_dob;
@@ -147,14 +146,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
 
                     user.cus_dob = cus_dob;
                 }
-              
-                //DateTime dob;
-                //if (DateTime.TryParseExact(Input.cus_dob, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dob))
-                //{
-                //    user.cus_dob = Input.cus_dob;
-                //}
-
-
+        
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -220,7 +212,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("21522605@gm.uit.edu.vn", "Kt-71309610605");
+                smtpClient.Credentials = new NetworkCredential("21522605@gm.uit.edu.vn", "Abc-112023");
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.Send(message);
                 return true;

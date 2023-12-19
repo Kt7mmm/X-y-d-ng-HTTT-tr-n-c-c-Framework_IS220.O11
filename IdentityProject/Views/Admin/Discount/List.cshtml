@@ -1,0 +1,50 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 50px">ID</th>
+                <th>Tên Khuyến Mãi</th>
+                <th>Bắt Đầu</th>
+                <th>Kết Thúc</th>
+                <th>% Khuyến Mãi</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+                @foreach (var discount in (ViewData["Discounts"] as IEnumerable<Discount>))
+                {
+                    <tr>
+                        <td> @discount.dis_id </td>
+                        <td> @discount.dis_name </td>
+                        <td> @discount.dis_start </td>
+                        <td> @discount.dis_end </td>
+                        <td> @discount.dis_percent </td>
+                        <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Discount"
+                           asp-action="Edit" asp-route-id="@discount.dis_id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Discount"
+                           asp-action="Delete" asp-route-id="@discount.dis_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+
+                        @*
+                            <a class="btn btn-primary btn-sm" href="/admin/discounts/edit/' . $discount->dis_id . '">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="#"
+                               onclick="removeRow(\'' . $discount->dis_id . '\', \'/admin/discounts/destroy\')">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        *@
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+    </div>
+}

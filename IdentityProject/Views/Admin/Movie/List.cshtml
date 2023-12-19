@@ -1,0 +1,54 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 50px">ID</th>
+                <th>Tên Phim</th>
+                <th>Bắt Đầu</th>
+                <th>Kết Thúc</th>
+                <th>Poster</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+            {
+                 <tr>
+                    <td>@movie.mv_id</td>
+                    <td>@movie.mv_name</td>
+                    <td>@movie.mv_start</td>
+                    <td>@movie.mv_end</td>
+                    <td>
+                        <a href="@movie.mv_link_poster" target="_blank">
+                            <img src= "@movie.mv_link_poster height="40px">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Movie"
+                           asp-action="Edit" asp-route-id="@movie.mv_id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Movie"
+                           asp-action="Delete" asp-route-id="@movie.mv_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+
+                     @*
+                        <a class="btn btn-primary btn-sm" href="/admin/movies/edit/' . $movie->mv_id . '">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" href="#"
+                           onclick="removeRow(\'' . $movie->mv_id . '\', \'/admin/movies/destroy\')">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                     *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+    </div>
+}

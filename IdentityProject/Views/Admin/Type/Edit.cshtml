@@ -1,0 +1,48 @@
+﻿@model MovieType;
+
+@section AdminHead{
+    <script src="/ckeditor/ckeditor.js"></script>
+}
+
+@{
+    <form method="POST" asp-controller="Type" asp-action="Edit">
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="type_id">ID</label>
+                        <input asp-for="type_id" type="text" placeholder="Nhập ID thể loại phim" readonly>
+                        <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="type_name">Tên Thể Loại</label>
+                        <input asp-for="type_name" type="text" placeholder="Nhập tên thể loại phim">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Cập nhật Thể Loại</button>
+        </div>
+
+    </form>
+}
+
+@section AdminFooter{
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#content'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

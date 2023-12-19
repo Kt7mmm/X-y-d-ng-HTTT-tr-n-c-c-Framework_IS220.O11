@@ -1,0 +1,52 @@
+﻿@model Discount;
+
+@{
+    <form method="POST" asp-controller="Discount" asp-action="Add">
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="dis_id">ID Khuyến Mãi</label>
+                        <input type="text" asp-for="dis_id" placeholder="Nhập id CTKM">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="dis_name">Tên Khuyến Mãi</label>
+                        <input type="text" asp-for="dis_name" placeholder="Nhập tên CTKM">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="dis_start">Ngày bắt đầu</label>
+                        <input type="date" asp-for="dis_start">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="dis_end">Ngày kết thúc</label>
+                        <input type="date" asp-for="dis_end">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Phần trăm khuyến mãi</label>
+                <input type="number" step="0.01" min="0" max="100" asp-for="dis_percent">
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Tạo Khuyến Mãi</button>
+        </div>
+
+    </form>
+}

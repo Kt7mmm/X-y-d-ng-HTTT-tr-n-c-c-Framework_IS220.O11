@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@{
+}
+@if (User.IsInRole("Admin"))
+{
+    <h1>This is Admin</h1>
+}
+else if (User.IsInRole("User"))
+{
+    
+}

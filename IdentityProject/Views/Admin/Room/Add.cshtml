@@ -1,0 +1,34 @@
+﻿@model Room;
+
+@{
+    <form method="POST" asp-controller="Room" asp-action="Add">
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="r_id">ID</label>
+                        <input type="text" asp-for="r_id" placeholder="Nhập ID phòng chiếu">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="r_capacity">Sức Chứa</label>
+                        <input type="number" asp-for="r_capacity" min="0" placeholder="Nhập sức chứa phòng chiếu">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Tạo Phòng Chiếu</button>
+        </div>
+
+    </form>
+
+}

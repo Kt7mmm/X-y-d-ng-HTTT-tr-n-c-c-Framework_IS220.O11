@@ -1,0 +1,47 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 150px">ID Ghế</th>
+                <th style="width: 150px">ID Phòng</th>
+                <th>Loại Ghế</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var seat in (ViewData["Seats"] as IEnumerable<Seat>))
+            {
+                <tr>
+                    <td> @seat.st_id </td>
+                    <td> @seat.r_id </td>
+                    <td> @seat.st_type </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Seat"
+                           asp-action="Edit" asp-route-seatid="@seat.st_id" asp-route-roomid="@seat.r_id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Seat"
+                           asp-action="Delete" asp-route-seatid="@seat.st_id" asp-route-roomid="@seat.r_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+
+                    @*
+                        <a class="btn btn-primary btn-sm" href="/admin/seats/edit/' . $seat->st_id . '_' . $seat->r_id . '">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" href="#"
+                           onclick="removeRow2(\'' . $seat->st_id . '\' , \'' . $seat->r_id . '\', \'/admin/seats/destroy\')">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                     *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        
+    </div>
+}

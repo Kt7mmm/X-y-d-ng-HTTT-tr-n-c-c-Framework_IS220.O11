@@ -1,0 +1,49 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 50px">ID</th>
+                <th>Họ tên</th>
+                <th>Số điện thoại</th>
+                <th>Giới tính</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Loại thành viên</th>
+                <th>Điểm tích lũy</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var customer in (ViewData["Customers"] as IEnumerable<Customer>))
+            {
+                <tr>
+                    <td>@customer.cus_id</td>
+                    <td>@customer.cus_name</td>
+                    <td>@customer.cus_phone</td>
+                    <td>@customer.cus_gender</td>
+                    <td>@customer.cus_email</td>
+                    <td>@customer.cus_dob</td>
+                    <td>@customer.cus_type</td>
+                    <td>@customer.cus_point</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" asp-controller="Customer"
+                           asp-action="Delete" asp-route-id="@customer.cus_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    @*
+                        <a class="btn btn-danger btn-sm" href="#"
+                           onclick="removeRow(\'' . $customer->cus_id . '\', \'/admin/customers/destroy\')">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                     *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        @*{!! (ViewData["Customers"] as IEnumerable<Customer>)->links() !!}*@
+    </div>
+}

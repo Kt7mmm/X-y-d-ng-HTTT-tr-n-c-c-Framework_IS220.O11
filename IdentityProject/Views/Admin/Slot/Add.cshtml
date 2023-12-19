@@ -1,0 +1,64 @@
+﻿@model Slot;
+
+@{
+    <form  method="POST" asp-controller="Slot" asp-action="Add">
+
+    <div class="card-body">
+
+                <div class="form-group">
+                <label asp-for="sl_id">ID Suất Chiếu</label>
+                <input type="text" asp-for="sl_id" placeholder="Nhập id suất chiếu">
+                </div>
+ 
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                        <label asp-for="r_id">ID Phòng Chiếu</label><br>
+                        <select asp-for="r_id" style="width:150px; height: 30px">
+                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+                            {
+                                <option value="@room.r_id">
+                                    @room.r_id
+                                </option>
+                            }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                        <label asp-for="mv_id">Tên Phim</label><br>
+                        <select asp-for="mv_id" style="width:150px; height: 30px">
+                            @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+                            {
+                                <option value="@movie.mv_id">
+                                    @movie.mv_name
+                                </option>
+                            }
+                    </select>
+                </div>
+            </div>
+        </div>
+
+                <div class="form-group">
+                <label asp-for="sl_start">Thời Điểm Khởi Chiếu</label><br>
+                <input type="datetime-local" step="1" asp-for="sl_start">
+                </div>
+
+                <div class="form-group">
+                <label asp-for="sl_price">Giá Suất Chiếu</label><br>
+                <input type="number" step="0.01" min="0" asp-for="sl_price">
+                </div>
+
+
+    </div>
+
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Tạo Suất Chiếu</button>
+    </div>
+
+    </form>
+
+}

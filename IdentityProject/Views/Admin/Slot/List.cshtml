@@ -1,0 +1,64 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 100px">ID Suất Chiếu</th>
+                <th style="width: 100px">ID Phòng</th>
+                <th>Tên Phim</th>
+                <th>Khởi Chiếu</th>
+                <th>Kết Thúc</th>
+                <th>Giá</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var slot in (ViewData["Slots"] as IEnumerable<Slot>))
+            {
+                <tr>
+                    <td> @slot.sl_id </td>
+                    <td> @slot.r_id </td>
+                    <td>
+                        @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+                        {
+                            @if (@slot.mv_id == @movie.mv_id)
+                            {
+                                @: @movie.mv_name
+                                break;
+                            }
+                        }
+                    </td>
+                    <td> @slot.sl_start </td>
+                    <td> @slot.sl_end </td>
+                    <td> @slot.sl_price </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Slot"
+                           asp-action="Edit" asp-route-slotid="@slot.sl_id" asp-route-roomid="@slot.r_id" asp-route-movieid="@slot.mv_id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-controller="Slot"
+                           asp-action="Delete" asp-route-slotid="@slot.sl_id" asp-route-roomid="@slot.r_id" asp-route-movieid="@slot.mv_id">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    @*
+                        <a class="btn btn-primary btn-sm" href="/admin/slots/edit/' . $slot->sl_id . " _" . $slot->
+                            r_id .  "_" . $slot->mv_id  . '" >
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" href="#"
+                           onclick="removeRow3(\'' . $slot->
+                            sl_id .  '\' , \'' . $slot->r_id .
+                            '\' , \'' . $slot->mv_id . '\', \'/admin/slots/destroy\')">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+
+    </div>
+}

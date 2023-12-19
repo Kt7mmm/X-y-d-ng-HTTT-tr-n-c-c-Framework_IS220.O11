@@ -1,0 +1,79 @@
+﻿@model Slot;
+
+@{
+    <form method="POST" asp-controller="Slot" asp-action="Edit">
+
+    <div class="card-body">
+
+                <div class="form-group">
+                <label asp-for="sl_id">ID Suất Chiếu</label>
+                <input type="text" asp-for="sl_id" placeholder="Nhập id suất chiếu" readonly>
+                <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                        <label asp-for="r_id">ID Phòng Chiếu</label><br>
+ 
+                        <select style="width:150px; height: 30px" disabled>
+                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+                            {
+                                @:<option value="@room.r_id" 
+                                    @if (@room.r_id == Model.r_id)
+                                        {
+                                        @:selected="selected"
+                                    }
+                                 @:   >@room.r_id
+                                @:</option>
+                            }
+                    </select>
+
+                        <input type="hidden" asp-for="r_id" placeholder="ID phòng chiếu" readonly>
+                    <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label asp-for="mv_id">Tên Phim</label><br>
+
+                    <select  style="width:150px; height: 30px" disabled>
+                            @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+                            {
+                                @:<option value="@movie.mv_id" 
+                                    @if (@movie.mv_id == Model.mv_id)
+                                    {
+                                    @:selected="selected"
+                                }
+                                 @:   >@movie.mv_name
+                                @:</option>
+                            }
+                    </select>
+                    
+                      <input type="hidden" asp-for="mv_id" readonly>
+                    <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                </div>
+            </div>
+        </div>
+
+                <div class="form-group">
+                <label asp-for="sl_start">Thời Điểm Khởi Chiếu</label><br>
+                <input type="datetime-local" step="1" asp-for="sl_start">
+                </div>
+
+                <div class="form-group">
+                <label asp-for="sl_price">Giá Suất Chiếu</label><br>
+                <input type="number" step="0.01" min="0" asp-for="sl_price">
+                </div>
+
+    </div>
+
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Cập Nhật Suất Chiếu</button>
+    </div>
+
+    </form>
+}

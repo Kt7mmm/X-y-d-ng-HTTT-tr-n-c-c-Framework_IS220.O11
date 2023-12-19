@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Downloads\\IdentityProject\\IdentityProject\\IdentityProject\\Cinema.csproj": {}
+    "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Downloads\\IdentityProject\\IdentityProject\\IdentityProject\\Cinema.csproj": {
+    "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\IdentityProject\\IdentityProject\\IdentityProject\\Cinema.csproj",
+        "projectUniqueName": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj",
         "projectName": "Cinema",
-        "projectPath": "C:\\Users\\Admin\\Downloads\\IdentityProject\\IdentityProject\\IdentityProject\\Cinema.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Downloads\\IdentityProject\\IdentityProject\\IdentityProject\\obj\\",
+        "projectPath": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj",
+        "packagesPath": "C:\\Users\\Hoàng\\.nuget\\packages\\",
+        "outputPath": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hoàng\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,19 +48,35 @@
               "target": "Package",
               "version": "[6.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.23, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.23, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.16, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[6.10.7, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

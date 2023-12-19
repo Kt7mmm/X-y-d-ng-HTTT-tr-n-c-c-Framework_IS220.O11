@@ -1,0 +1,40 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã tháng</th>
+                <th>Số tháng</th>
+                <th>Mã năm</th>
+                <th>Tổng số vé</th>
+                <th>Tổng doanh thu</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {!! \App\Helpers\Helper::month($months) !!}
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+        {!! $months->links() !!}
+    </div>
+}
+
+public static function month($months){
+        $html = '';
+
+        foreach($months as $key => $month){
+                $html .= '
+<tr>
+    <td>' . $month->mre_id . '</td>
+    <td>' . $month->mre_month . '</td>
+    <td>' . $month->mre_yre_id . '</td>
+    <td>' . $month->mre_count . '</td>
+    <td>' . $month->mre_value . '</td>
+</tr>
+                ';
+
+                unset($month[$key]);
+        }
+        return $html;
+    }

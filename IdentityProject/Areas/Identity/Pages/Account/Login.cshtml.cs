@@ -116,7 +116,9 @@ namespace IdentityProject.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    //return LocalRedirect(returnUrl);
+                    return RedirectToAction("Index", "Home"); // Chuyển hướng đến trang Index trong HomeController cho quyền Admin
+
                 }
                 if (result.RequiresTwoFactor)
                 {

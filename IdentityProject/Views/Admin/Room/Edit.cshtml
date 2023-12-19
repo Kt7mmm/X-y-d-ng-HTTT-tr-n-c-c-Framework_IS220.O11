@@ -1,0 +1,48 @@
+﻿@model Room;
+
+@section AdminHead{
+    <script src="~/ckeditor/ckeditor.js"></script>
+}
+
+@{
+    <form method="POST" asp-controller="Room" asp-action="Edit">
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="r_id">ID</label>
+                        <input type="text" asp-for="r_id" placeholder="Nhập ID phòng chiếu" readonly>
+                        <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="r_capacity">Sức Chứa</label>
+                        <input type="number" asp-for="r_capacity" min="0" placeholder="Nhập sức chứa phòng chiếu">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Cập nhật Phòng Chiếu</button>
+        </div>
+
+    </form>
+}
+
+@section AdminFooter{
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#content'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

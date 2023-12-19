@@ -1,0 +1,57 @@
+﻿
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID Vé</th>
+                <th>ID Slot</th>
+                <th>ID Phòng Chiếu</th>
+                <th>ID Ghế</th>
+                <th>Loại vé</th>
+                <th>Tính khả dụng</th>
+                <th style="width: 100px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var ticket in (ViewData["Tickets"] as IEnumerable<Ticket>))
+            {
+                <tr>
+                    <td> @ticket.tk_id </td>
+                    <td> @ticket.sl_id </td>
+                    <td> @ticket.r_id </td>
+                    <td> @ticket.st_id </td>
+                    <td> @ticket.tk_type </td>
+                    <td>
+                        @if (ticket.tk_available == 0)
+                        {
+                            @:<span class="btn btn-danger btn-xs">Không</span>
+                        }
+                        else
+                        {
+                            @:<span class="btn btn-success btn-xs">Có</span>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Ticket" asp-action="Detail"
+                           asp-route-ticketid="@ticket.tk_id"
+                           asp-route-slotid="@ticket.sl_id"
+                           asp-route-seatid="@ticket.st_id">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        @*
+                <a class="btn btn-primary btn-sm" href="/admin/tickets/detail/' . $ticket->tk_id  . '">
+                <i class="fas fa-eye"></i>
+                </a>
+                *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center">
+    </div>
+}
+
+
+

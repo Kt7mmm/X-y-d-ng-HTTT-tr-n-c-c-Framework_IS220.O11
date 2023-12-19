@@ -9,7 +9,7 @@ namespace IdentityProject.Data;
 
 public class IdentityProjectContext : IdentityDbContext<IdentityProjectUser>
 {
-    public DbSet<Customer> Customers { get; set; }
+    //public DbSet<Customer> Customers { get; set; }
     public IdentityProjectContext(DbContextOptions<IdentityProjectContext> options)
         : base(options)
     {

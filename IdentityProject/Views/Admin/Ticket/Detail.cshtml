@@ -1,0 +1,92 @@
+﻿@model Ticket;
+
+@{
+    <form>
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Vé: </label>
+                        <label>@Model.tk_id </label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Phim: </label>
+                        <label>@Model.mv_id</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Suất Chiếu: </label>
+                        <label>@Model.sl_id</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Phòng Chiếu: </label>
+                        <label>@Model.r_id</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Ghế: </label>
+                        <label>@Model.st_id</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Loại vé: </label>
+                        <label>@Model.tk_type</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>ID Hóa đơn: </label>
+                        <label>@Model.bi_id</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Giá vé: </label>
+                        <label>@Model.tk_value</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label>Tính hiệu lực: </label>
+                        @if (@Model.tk_available == 0)
+                        {
+                            @:<label>Không</label>
+                        }
+                        else
+                        {
+                            @:<label>Có</label>
+                        }
+            </div>
+
+        </div>
+
+
+        <div class="card-footer">
+        </div>
+
+    </form>
+}

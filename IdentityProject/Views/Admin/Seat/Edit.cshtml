@@ -1,0 +1,65 @@
+﻿@model Seat;
+
+@{
+    <form  method="POST" asp-controller="Seat" asp-action="Edit">
+
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="st_id">ID Ghế</label><br>
+                        <input type="text" asp-for="st_id" placeholder="Nhập id ghế" readonly>
+                        <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label asp-for="r_id">ID Phòng Chiếu</label><br>
+                    <select asp-for="r_id" style="width:150px; height: 30px" >
+                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+                            {
+                                @:<option value="@room.r_id" 
+                                    @if (@room.r_id == Model.r_id)
+                                    {
+                                        @:selected="selected"
+                                    }
+                                 @:   >@room.r_id
+                                @:</option>
+                            }
+                    </select>
+                    <i class="fas fa-ban" style="color: #e60f0f; margin-left: 10px"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Loại Ghế</label>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" value="standard" type="radio" id="type_standard" asp-for="st_type">
+                        <label for="type_standard" class="custom-control-label">Thường</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" value = "vip" type="radio" id="type_vip" asp-for="st_type">
+                        <label for="type_vip" class="custom-control-label">VIP</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" value = "sweetbox" type="radio" id="type_sweetbox" asp-for="st_type">
+                        <label for="type_sweetbox" class="custom-control-label">SweetBox</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Cập Nhật Ghế</button>
+    </div>
+
+    </form>
+}
