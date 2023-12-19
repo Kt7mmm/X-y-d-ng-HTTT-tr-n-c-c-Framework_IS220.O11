@@ -9,7 +9,7 @@
         </thead>
 
         <tbody>
-            @foreach (var type in (ViewData["Types"] as IEnumerable<MovieType>))
+            @foreach (var type in (ViewData["Types"] as IEnumerable<IdentityProject.Models.MovieType>))
             {
                 <tr>
                     <td>@type.type_id</td>

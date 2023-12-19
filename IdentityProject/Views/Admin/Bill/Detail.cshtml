@@ -1,4 +1,4 @@
-﻿@model Bill;
+﻿@model IdentityProject.Models.Bill;
 
 @{
 
@@ -25,8 +25,8 @@
         <div class="row">
             <div class="col-md-6">    
                 <div class="form-group">
-                <label>ID Khách Hàng: </label>
-                 <label>@Model.cus_id</label>
+                <label>Email Khách Hàng: </label>
+                 <label>@Model.cus_email</label>
                 </div>
             </div>
 
@@ -34,9 +34,9 @@
                 <div class="form-group">
                 <label>Tên Khách Hàng: </label>
                 <label>
-                            @foreach (var customer in (ViewData["Customers"] as IEnumerable<Customer>))
+                            @foreach (var customer in (ViewData["Customers"] as IEnumerable<IdentityProject.Models.Customer>))
                             {
-                                @if (customer.cus_id == @Model.cus_id)
+                                @if (customer.cus_email == @Model.cus_email)
                                 {
                                     @:@customer.cus_name
                                 }
@@ -51,7 +51,7 @@
                 <div class="form-group">
                 <label>ID các vé: </label><br>
                     <select name="ticket" style="width:150px; height: 30px">
-                            @foreach (var ticket in (ViewData["Tickets"] as IEnumerable<Ticket>))
+                            @foreach (var ticket in (ViewData["Tickets"] as IEnumerable<IdentityProject.Models.Ticket>))
                             {
                                 <option value="@ticket.tk_id">
                                      @ticket.tk_id 
@@ -65,10 +65,10 @@
                 <div class="form-group">
                 <label>Tên các khuyến mãi đã dùng: </label><br>
                     <select name="discount" style="width:150px; height: 30px">
-                            @foreach (var chosendiscount in (ViewData["ChosenDiscounts"] as IEnumerable<ApplyDiscount>))
+                            @foreach (var chosendiscount in (ViewData["ChosenDiscounts"] as IEnumerable<IdentityProject.Models.ApplyDiscount>))
                             {
                                 <option value="@chosendiscount.dis_id">
-                                @foreach (var discount in (ViewData["Discounts"] as IEnumerable<Discount>))
+                                    @foreach (var discount in (ViewData["Discounts"] as IEnumerable<IdentityProject.Models.Discount>))
                                 {
                                     @if(discount.dis_id == chosendiscount.dis_id)
                                     {

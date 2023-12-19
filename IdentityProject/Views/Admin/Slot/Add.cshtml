@@ -1,4 +1,4 @@
-﻿@model Slot;
+﻿@model IdentityProject.Models.Slot;
 
 @{
     <form  method="POST" asp-controller="Slot" asp-action="Add">
@@ -16,7 +16,7 @@
                 <div class="form-group">
                         <label asp-for="r_id">ID Phòng Chiếu</label><br>
                         <select asp-for="r_id" style="width:150px; height: 30px">
-                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<IdentityProject.Models.Room>))
                             {
                                 <option value="@room.r_id">
                                     @room.r_id
@@ -30,7 +30,7 @@
                 <div class="form-group">
                         <label asp-for="mv_id">Tên Phim</label><br>
                         <select asp-for="mv_id" style="width:150px; height: 30px">
-                            @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+                            @foreach (var movie in (ViewData["Movies"] as IEnumerable<IdentityProject.Models.Movie>))
                             {
                                 <option value="@movie.mv_id">
                                     @movie.mv_name

@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
-    [PrimaryKey(nameof(tk_id), nameof(sl_id), nameof(st_id))]
     public class Ticket
     {
+        [Key]
         [Required]
         [StringLength(10)]
         public string tk_id { get; set; }
@@ -15,6 +15,7 @@ namespace cinema.Models
         [StringLength(10)]
         public string mv_id { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string sl_id { get; set; }
@@ -27,6 +28,7 @@ namespace cinema.Models
         [Range(0,Double.MaxValue)]
         public Decimal tk_value { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string st_id { get; set; }

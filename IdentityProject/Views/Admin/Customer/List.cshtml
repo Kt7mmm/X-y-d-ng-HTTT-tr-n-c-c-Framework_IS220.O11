@@ -16,10 +16,10 @@
         </thead>
 
         <tbody>
-            @foreach (var customer in (ViewData["Customers"] as IEnumerable<Customer>))
+            @foreach (var customer in (ViewData["Customers"] as IEnumerable<IdentityProject.Models.Customer>))
             {
                 <tr>
-                    <td>@customer.cus_id</td>
+                    <td>@customer.c_id</td>
                     <td>@customer.cus_name</td>
                     <td>@customer.cus_phone</td>
                     <td>@customer.cus_gender</td>
@@ -29,7 +29,7 @@
                     <td>@customer.cus_point</td>
                     <td>
                         <a class="btn btn-danger btn-sm" asp-controller="Customer"
-                           asp-action="Delete" asp-route-id="@customer.cus_id">
+                           asp-action="Delete" asp-route-id="@customer.c_id">
                             <i class="fas fa-trash"></i>
                         </a>
                     @*

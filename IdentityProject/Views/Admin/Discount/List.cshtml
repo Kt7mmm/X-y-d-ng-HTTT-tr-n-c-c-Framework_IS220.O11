@@ -13,7 +13,7 @@
         </thead>
 
         <tbody>
-                @foreach (var discount in (ViewData["Discounts"] as IEnumerable<Discount>))
+            @foreach (var discount in (ViewData["Discounts"] as IEnumerable<IdentityProject.Models.Discount>))
                 {
                     <tr>
                         <td> @discount.dis_id </td>

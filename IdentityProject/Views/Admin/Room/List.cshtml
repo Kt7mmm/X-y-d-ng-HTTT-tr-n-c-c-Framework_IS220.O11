@@ -10,7 +10,7 @@
         </thead>
 
         <tbody>
-            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+            @foreach (var room in (ViewData["Rooms"] as IEnumerable<IdentityProject.Models.Room>))
             {
                 <tr>
                     <td> @room.r_id </td>

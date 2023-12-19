@@ -1,10 +1,10 @@
-﻿using cinema.Context;
-using cinema.Models;
+﻿using IdentityProject.Context;
+using IdentityProject.Models;
 using Microsoft.EntityFrameworkCore;
-using ChooseType = cinema.Models.ChooseType;
-using Movie = cinema.Models.Movie;
+using ChooseType = IdentityProject.Models.ChooseType;
+using Movie = IdentityProject.Models.Movie;
 
-namespace cinema.Repositories
+namespace IdentityProject.Repositories
 {
     public class MovieRepository : IMovieRepository
     {

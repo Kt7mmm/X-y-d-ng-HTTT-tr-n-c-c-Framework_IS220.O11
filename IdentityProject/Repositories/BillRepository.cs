@@ -1,8 +1,8 @@
-﻿using cinema.Context;
-using cinema.Models;
+﻿using IdentityProject.Context;
+using IdentityProject.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace cinema.Repositories
+namespace IdentityProject.Repositories
 {
     public class BillRepository : IBillRepository
     {

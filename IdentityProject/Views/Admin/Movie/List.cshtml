@@ -13,7 +13,7 @@
         </thead>
 
         <tbody>
-            @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+            @foreach (var movie in (ViewData["Movies"] as IEnumerable<IdentityProject.Models.Movie>))
             {
                  <tr>
                     <td>@movie.mv_id</td>

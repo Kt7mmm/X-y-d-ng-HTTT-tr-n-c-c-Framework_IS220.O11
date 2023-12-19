@@ -1,6 +1,6 @@
-﻿using cinema.Context;
-using cinema.Models;
-using cinema.Repositories;
+﻿using IdentityProject.Context;
+using IdentityProject.Models;
+using IdentityProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cinema.Controllers.Admin
@@ -20,7 +20,7 @@ namespace cinema.Controllers.Admin
 
             ViewData["Title"] = "Danh sách hóa đơn";
             ViewData["Bills"] = await _BillRepository.GetAll();
-            ViewData["Customers"] = _dbContext.Customers.OrderBy(p => p.cus_id).ToList();
+            ViewData["Customers"] = _dbContext.Customers.OrderBy(p => p.cus_name).ToList();
 
             return View("~/Views/Admin/Bill/List.cshtml");
         }
@@ -30,7 +30,7 @@ namespace cinema.Controllers.Admin
 
             ViewData["Title"] = "Chi tiết hóa đơn";
             Bill bill = await _BillRepository.GetBill(id);
-            ViewData["Customers"] = _dbContext.Customers.OrderBy(p => p.cus_id).ToList();
+            ViewData["Customers"] = _dbContext.Customers.OrderBy(p => p.cus_name).ToList();
             ViewData["Tickets"] = _dbContext.Tickets.OrderBy(p => p.tk_id).Where(x => x.bi_id == id).ToList();
             ViewData["Discounts"] = _dbContext.Discounts.OrderBy(p => p.dis_id).ToList();
             ViewData["ChosenDiscounts"] = _dbContext.ApplyDiscounts.OrderBy(p => p.dis_id).Where(x => x.bi_id == id).ToList();

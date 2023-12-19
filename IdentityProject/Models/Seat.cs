@@ -2,15 +2,17 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
-    [PrimaryKey(nameof(st_id), nameof(r_id))]
+
     public class Seat
     {
+        [Key]
         [Required]
         [StringLength(10)]
         public string st_id { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string r_id { get; set; }

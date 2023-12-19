@@ -14,13 +14,13 @@
         </thead>
 
         <tbody>
-            @foreach (var slot in (ViewData["Slots"] as IEnumerable<Slot>))
+            @foreach (var slot in (ViewData["Slots"] as IEnumerable<IdentityProject.Models.Slot>))
             {
                 <tr>
                     <td> @slot.sl_id </td>
                     <td> @slot.r_id </td>
                     <td>
-                        @foreach (var movie in (ViewData["Movies"] as IEnumerable<Movie>))
+                        @foreach (var movie in (ViewData["Movies"] as IEnumerable<IdentityProject.Models.Movie>))
                         {
                             @if (@slot.mv_id == @movie.mv_id)
                             {

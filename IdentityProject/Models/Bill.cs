@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
     public class Bill
     {
@@ -12,9 +12,8 @@ namespace cinema.Models
 
 
         [Required]
-        [StringLength(10)]
-        public string cus_id { get; set; }
-        [ForeignKey(nameof(cus_id))]
+        public string cus_email { get; set; }
+        [ForeignKey(nameof(cus_email))]
         public virtual Customer Customer { get; set; }
 
         [Required]

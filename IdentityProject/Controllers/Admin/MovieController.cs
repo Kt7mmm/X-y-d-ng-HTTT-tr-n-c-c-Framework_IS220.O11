@@ -1,14 +1,14 @@
-﻿using cinema.Context;
-using cinema.Models;
-using cinema.Repositories;
+﻿using IdentityProject.Context;
+using IdentityProject.Models;
+using IdentityProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Linq;
-using Movie = cinema.Models.Movie;
+using Movie = IdentityProject.Models.Movie;
 
-namespace cinema.Controllers.Admin
+namespace IdentityProject.Controllers.Admin
 {
     public class MovieController : Controller
     {

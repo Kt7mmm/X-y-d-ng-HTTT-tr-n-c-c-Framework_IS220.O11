@@ -14,7 +14,7 @@
         </thead>
 
         <tbody>
-            @foreach (var ticket in (ViewData["Tickets"] as IEnumerable<Ticket>))
+            @foreach (var ticket in (ViewData["Tickets"] as IEnumerable<IdentityProject.Models.Ticket>))
             {
                 <tr>
                     <td> @ticket.tk_id </td>

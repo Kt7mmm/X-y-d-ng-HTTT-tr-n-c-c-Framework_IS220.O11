@@ -1,4 +1,4 @@
-﻿@model Seat;
+﻿@model IdentityProject.Models.Seat;
 
 @{
     <form  method="POST" asp-controller="Seat" asp-action="Edit">
@@ -18,7 +18,7 @@
                 <div class="form-group">
                 <label asp-for="r_id">ID Phòng Chiếu</label><br>
                     <select asp-for="r_id" style="width:150px; height: 30px" >
-                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<Room>))
+                            @foreach (var room in (ViewData["Rooms"] as IEnumerable<IdentityProject.Models.Room>))
                             {
                                 @:<option value="@room.r_id" 
                                     @if (@room.r_id == Model.r_id)

@@ -1,10 +1,10 @@
-﻿using Azure.Core;
-using cinema.Context;
-using cinema.Models;
+﻿
+using IdentityProject.Context;
+using IdentityProject.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace cinema.Repositories
+namespace IdentityProject.Repositories
 {
     public class DiscountRepository : IDiscountRepository
     {

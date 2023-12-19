@@ -1,6 +1,6 @@
-﻿using cinema.Models;
+﻿using IdentityProject.Models;
 
-namespace cinema.Repositories
+namespace IdentityProject.Repositories
 {
     public interface IMovieRepository
     {

@@ -1,4 +1,4 @@
-﻿@model List<BlogLineChart>;
+﻿@model List<IdentityProject.Models.BlogLineChart>;
 
 @section AdminHead{
 
@@ -10,7 +10,7 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Năm', 'Số vé', 'Doanh thu'],
-            @foreach(BlogLineChart i in Model)
+            @foreach (IdentityProject.Models.BlogLineChart i in Model)
             {
                 @:['@i.DonVi', @i.SoVe, @i.DoanhThu],
             }

@@ -1,8 +1,8 @@
-﻿using cinema.Models;
-using cinema.Repositories;
+﻿using IdentityProject.Models;
+using IdentityProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace cinema.Controllers.Admin
+namespace IdentityProject.Controllers.Admin
 {
     public class RoomController : Controller
     {

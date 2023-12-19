@@ -11,7 +11,7 @@
         </thead>
 
         <tbody>
-            @foreach (var seat in (ViewData["Seats"] as IEnumerable<Seat>))
+            @foreach (var seat in (ViewData["Seats"] as IEnumerable<IdentityProject.Models.Seat>))
             {
                 <tr>
                     <td> @seat.st_id </td>

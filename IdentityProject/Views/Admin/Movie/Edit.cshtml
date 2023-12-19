@@ -5,7 +5,7 @@
 }
 
 @{
-    Movie movie = (Movie)ViewData["Movie"];
+    IdentityProject.Models.Movie movie = (IdentityProject.Models.Movie)ViewData["Movie"];
     @using (Html.BeginForm("EditMovie", "Movie"))
     {
 
@@ -59,11 +59,11 @@
                             <button type="button" class="form-control toggle-next ellipsis" id="dropdown_button"></button>
                             <div class="checkboxes" id="Thể loại">
                                 <div class="inner-wrap">
-                                    @foreach (var type in (ViewData["Types"] as IEnumerable<MovieType>))
+                                    @foreach (var type in (ViewData["Types"] as IEnumerable<IdentityProject.Models.MovieType>))
                                     {
                                         <label class="dropdown_label">
                                             <input type="checkbox" value="@type.type_id" class="ckkBox val" name="movie_type[]"
-                                            @foreach (var chosentype in (ViewData["ChosenTypes"] as IEnumerable<ChooseType>))
+                                            @foreach (var chosentype in (ViewData["ChosenTypes"] as IEnumerable<IdentityProject.Models.ChooseType>))
                                             {
                                                 @if (@chosentype.type_id == @type.type_id)
                                                 {

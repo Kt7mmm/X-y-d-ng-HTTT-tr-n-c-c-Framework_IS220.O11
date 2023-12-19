@@ -1,11 +1,8 @@
-﻿using cinema.Context;
-using cinema.Models;
-using cinema.Repositories;
+﻿using IdentityProject.Context;
+using IdentityProject.Models;
+using IdentityProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MySqlX.XDevAPI.Common;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace cinema.Controllers.Admin
 {
     public class ChartController : Controller

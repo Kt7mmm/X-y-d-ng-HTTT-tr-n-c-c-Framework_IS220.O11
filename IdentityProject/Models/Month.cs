@@ -2,11 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
-    [PrimaryKey(nameof(mre_id),nameof(mre_yre_id))]
+
     public class Month
     {
+        [Key]
         [Required]
         [StringLength(10)]
         public string mre_id { get; set; }
@@ -14,6 +15,7 @@ namespace cinema.Models
         [Required]
         public int mre_month { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string mre_yre_id { get; set; }

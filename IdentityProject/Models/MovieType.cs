@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
     [Index(nameof(MovieType.type_name), IsUnique = true)]
     public class MovieType

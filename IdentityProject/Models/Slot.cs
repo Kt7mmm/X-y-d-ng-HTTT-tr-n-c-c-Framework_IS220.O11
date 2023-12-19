@@ -2,21 +2,23 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
-    [PrimaryKey(nameof(sl_id), nameof(r_id),nameof(mv_id))]
     public class Slot
     {
+        [Key]
         [Required]
         [StringLength(10)]
         public string sl_id { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string r_id { get; set; }
         [ForeignKey(nameof(r_id))]
         public virtual Room room { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string mv_id { get; set; }

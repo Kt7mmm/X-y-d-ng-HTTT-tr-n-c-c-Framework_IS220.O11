@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace cinema.Models
+namespace IdentityProject.Models
 {
     public class Room
     {

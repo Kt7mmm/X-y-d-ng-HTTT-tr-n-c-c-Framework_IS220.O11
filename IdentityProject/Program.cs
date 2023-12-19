@@ -12,7 +12,6 @@ using Serilog.Events;
 using System.Globalization;
 using MySql.Data.MySqlClient;
 using System.Data;
-using cinema.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityProjectContextConnection") ?? throw new InvalidOperationException("Connection string 'DBContextConnection' not found.");

@@ -1,4 +1,4 @@
-﻿namespace cinema.Repositories
+﻿namespace IdentityProject.Repositories
 {
     public class RevenueRepository
     {
