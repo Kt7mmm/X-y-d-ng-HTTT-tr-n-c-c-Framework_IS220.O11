@@ -104,21 +104,39 @@ namespace IdentityProject.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/");
+            //returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             if (ModelState.IsValid)
             {
+                
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    //return LocalRedirect(returnUrl);
-                    return RedirectToAction("Index", "Home"); // Chuyển hướng đến trang Index trong HomeController cho quyền Admin
+                    Console.WriteLine("login");
 
+                    var user = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
+                    var roles = await _signInManager.UserManager.GetRolesAsync(user);
+                    //return LocalRedirect(returnUrl);
+                    //return RedirectToAction("Index", "Main");
+
+                    //return RedirectToAction("Index", "Home" /*new { area = "" }*/); // Chuyển hướng đến trang Index trong HomeController cho cả 2 quyền 
+                    if (roles.Contains("Admin"))
+                    {
+                        Console.WriteLine("admin");
+                        return RedirectToAction("AdminIndex","Home");
+                    }
+                    else 
+                    {
+                        Console.WriteLine("user");
+
+                        return RedirectToAction("UserIndex", "Home");
+                    }
+           
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -135,6 +153,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
                     return Page();
                 }
             }
+            Console.WriteLine("test");
 
             // If we got this far, something failed, redisplay form
             return Page();

@@ -12472,19 +12472,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hoàng\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\Cinema.csproj",
       "projectName": "Cinema",
-      "projectPath": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\Cinema.csproj",
-      "packagesPath": "C:\\Users\\Hoàng\\.nuget\\packages\\",
-      "outputPath": "E:\\study\\dai_hoc\\hk5\\httt_framework\\do_an\\thanh\\IdentityProject\\IdentityProject\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\Cinema.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hoàng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

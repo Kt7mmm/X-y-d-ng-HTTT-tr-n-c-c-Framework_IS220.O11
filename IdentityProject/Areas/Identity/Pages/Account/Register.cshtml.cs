@@ -24,6 +24,9 @@ using System.Net;
 using System.Globalization;
 using Serilog;
 using IdentityProject.Models;
+using IdentityProject.Context;
+using Cinema.Migrations;
+using Microsoft.EntityFrameworkCore;
 
 namespace IdentityProject.Areas.Identity.Pages.Account
 {
@@ -35,13 +38,15 @@ namespace IdentityProject.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityProjectUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly CinemaDbContext _context;
 
         public RegisterModel(
             UserManager<IdentityProjectUser> userManager,
             IUserStore<IdentityProjectUser> userStore,
             SignInManager<IdentityProjectUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            CinemaDbContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -49,6 +54,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -153,6 +159,19 @@ namespace IdentityProject.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    var newCustomer = new Models.Customer()
+                    {
+                        cus_dob = (DateTime)user.cus_dob,
+                        cus_email = user.Email,
+                        cus_gender = user.cus_gender,
+                        cus_name = user.cus_name,
+                        cus_phone = user.cus_phone,
+                        cus_point = (int)user.cus_point,
+                        cus_type = user.cus_type
+                    };
+                    _context.Customers.Add(newCustomer);
+                    await _context.SaveChangesAsync();
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -167,6 +186,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
                     await SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
+
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
@@ -176,6 +196,7 @@ namespace IdentityProject.Areas.Identity.Pages.Account
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
+
                 }
                 foreach (var error in result.Errors)
                 {

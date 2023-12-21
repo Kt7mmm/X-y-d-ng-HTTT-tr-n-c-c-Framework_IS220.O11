@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace IdentityProject.Models
 {
@@ -13,8 +14,6 @@ namespace IdentityProject.Models
 
         [Required]
         public string cus_email { get; set; }
-        [ForeignKey(nameof(cus_email))]
-        public virtual Customer Customer { get; set; }
 
         [Required]
         public DateTime bi_date { get; set; }

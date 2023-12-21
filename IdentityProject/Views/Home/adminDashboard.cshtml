@@ -3,17 +3,10 @@
 *@
 @using Microsoft.AspNetCore.Identity
 
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@* @inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager *@
 
 
 @{
 }
-@if (User.IsInRole("Admin"))
-{
-    <h1>This is Admin</h1>
-}
-else if (User.IsInRole("User"))
-{
-    
-}
+<h1>This is Admin</h1>
