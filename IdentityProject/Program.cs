@@ -12,6 +12,7 @@ using Serilog.Events;
 using System.Globalization;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Cinema.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityProjectContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityProjectContextConnection' not found.");
@@ -25,6 +26,9 @@ builder.Services.AddDbContext<CinemaDbContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
+
+
+builder.Services.AddSingleton<IVnPayService, VnPayService>();
 
 builder.Services.AddScoped<IMovieTypeRepository, MovieTypeRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
@@ -121,7 +125,6 @@ using (var scope = app.Services.CreateScope())
         await userManager.AddToRoleAsync(user, "Admin");
     }
 }
-
 app.UseEndpoints(endpoints =>
 {
 

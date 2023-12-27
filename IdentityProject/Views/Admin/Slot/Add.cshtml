@@ -1,6 +1,8 @@
-﻿@model IdentityProject.Models.Slot;
+﻿@model IdentityProject.Models.Slot
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
+    Layout = "/Pages/Shared/AdminLayout.cshtml";
     <form  method="POST" asp-controller="Slot" asp-action="Add">
 
     <div class="card-body">

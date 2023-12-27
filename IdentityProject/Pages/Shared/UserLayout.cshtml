@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial name="UserHead" />
+    @await RenderSectionAsync("UserHead", required: false)
+</head>
+<body>
+    @await RenderSectionAsync("UserAlert", required: false)
+    
+    @RenderBody()
+
+    <partial name="UserFooter" />
+    @await RenderSectionAsync("UserFooter", required: false)
+
+</body>
+</html>
+

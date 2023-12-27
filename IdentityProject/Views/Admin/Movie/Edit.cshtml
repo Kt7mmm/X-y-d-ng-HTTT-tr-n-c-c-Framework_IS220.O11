@@ -1,10 +1,12 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @section AdminHead{
     <script src="~/ckeditor/ckeditor.js"></script>
     <link rel="stylesheet" href="~/template/css/dropdown_multiselect.css">
 }
 
 @{
+    Layout = "/Pages/Shared/AdminLayout.cshtml";
     IdentityProject.Models.Movie movie = (IdentityProject.Models.Movie)ViewData["Movie"];
     @using (Html.BeginForm("EditMovie", "Movie"))
     {
@@ -171,18 +173,18 @@
                     <label>Poster Phim</label>
                     <input type="file" class="form-control" id="upload_poster">
                     <div id="show_poster">
-                        <a href="@movie.mv_link_poster" target="_blank">
-                            <img src="@movie.mv_link_poster" width="100px">
+                    <a href="@movie.mv_link_poster" target="_blank">
+                        <img src="@movie.mv_link_poster" width="100px">
                         </a>
                     </div>
-                    <input type="hidden" name="mv_link_poster" id="link_poster" >
+                <input type="hidden" name="mv_link_poster" id="link_poster" value="@movie.mv_link_poster">
                 </div>
 
                 <div class="form-group">
                     <label>Trailer Phim</label>
                     <input type="file" class="form-control" id="upload_trailer">
                     <div id="show_trailer">
-                        <a href="@movie.mv_link_trailer" target="_blank">
+                    <a href="@movie.mv_link_trailer" target="_blank">
                             Đường dẫn link
                         </a>
                     </div>
@@ -206,5 +208,60 @@
             .catch(error => {
                 console.error(error);
             });
+
+        /* Upload file poster*/
+        $('#upload_poster').change(function () {
+            var form = new FormData();
+            form.append('file', $(this)[0].files[0]);
+
+            $.ajax({
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                data: form,
+                url: '/Movie/StorePoster',
+                success: function (result) {
+                    if (result.success) {
+                        // Hiển thị ảnh trên trang mà không làm tải lại
+                        $('#show_poster').html('<a href="' + result.imagePath + '" target="_blank">' +
+                            '<img src="' + result.imagePath + '" width="100px"></a>');
+
+                        // Gán đường dẫn ảnh cho trường ẩn
+                        $('#link_poster').val(result.imagePath);
+                    } else {
+                        alert("Upload File Poster Lỗi: " + result.errorMessage);
+                    }
+                },
+                error: function (error) {
+                    alert("Upload File Poster Lỗi: " + error.statusText);
+                }
+            });
+        });
+
+
+        /* Upload file trailer*/
+        $('#upload_trailer').change(function () {
+
+            var form = new FormData();
+            form.append('file', $(this)[0].files[0]);
+
+            $.ajax({
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                data: form,
+                url: '/Movie/StoreTrailer',
+                success: function (result) {
+                    if (result.success) {
+                        $('#show_trailer').html('<a href="' + result.trailerPath + '" target="_blank">Đường dẫn trailer</a>');
+
+                        $('#link_trailer').val(result.trailerPath);
+                    }
+                    else {
+                        alert("Upload File Trailer Lỗi");
+                    }
+                }
+            });
+        });
     </script>
 }

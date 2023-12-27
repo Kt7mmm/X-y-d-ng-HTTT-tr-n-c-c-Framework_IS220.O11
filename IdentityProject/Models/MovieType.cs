@@ -10,7 +10,8 @@ namespace IdentityProject.Models
         [Required]
         [StringLength(50)]
         public string type_id { get; set; }
-        
+
+        [Required]
         [StringLength(100)]
         public string type_name { get; set; }
     }

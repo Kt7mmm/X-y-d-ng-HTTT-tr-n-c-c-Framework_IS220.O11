@@ -8,7 +8,8 @@ namespace IdentityProject.Models
     {
         [Key]
         [Required]
-        [StringLength(10)]
+        [StringLength(250)]
+
         public string tk_id { get; set; }
 
         [Required]
@@ -38,7 +39,8 @@ namespace IdentityProject.Models
         public string tk_type { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(250)]
+
         public string bi_id { get; set; }
 
         [Required]

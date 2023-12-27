@@ -1,20 +1,23 @@
 ﻿using IdentityProject.Context;
 using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class BillController : Controller
     {
         private readonly IBillRepository _BillRepository;
         private readonly CinemaDbContext _dbContext;
+
         public BillController(IBillRepository BillRepository, CinemaDbContext dbContext)
         {
             _BillRepository = BillRepository;
             _dbContext = dbContext;
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

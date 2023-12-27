@@ -1,9 +1,11 @@
 ﻿using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class RoomController : Controller
     {
         private readonly IRoomRepository _RoomRepository;
@@ -12,6 +14,7 @@ namespace IdentityProject.Controllers.Admin
             _RoomRepository = RoomRepository;
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

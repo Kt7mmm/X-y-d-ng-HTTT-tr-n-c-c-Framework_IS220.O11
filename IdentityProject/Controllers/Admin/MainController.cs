@@ -1,20 +1,25 @@
 ﻿using IdentityProject.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 
-namespace cinema.Controllers.Admin
+namespace Cinema.Controllers
 {
+    [Authorize]
     public class MainController : Controller
     {
         private readonly ILogger<MainController> _logger;
+
 
         public MainController(ILogger<MainController> logger)
         {
             _logger = logger;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
+
             return View("~/Views/Admin/Main/Index.cshtml");
         }
 

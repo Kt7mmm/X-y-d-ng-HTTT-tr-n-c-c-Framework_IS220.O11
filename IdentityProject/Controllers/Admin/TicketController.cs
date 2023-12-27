@@ -1,10 +1,12 @@
 ﻿using IdentityProject.Context;
 using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class TicketController : Controller
     {
         private readonly ITicketRepository _TicketRepository;
@@ -15,6 +17,7 @@ namespace IdentityProject.Controllers.Admin
             _dbContext = dbContext;
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

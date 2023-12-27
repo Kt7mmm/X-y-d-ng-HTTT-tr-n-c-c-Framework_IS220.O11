@@ -1,9 +1,11 @@
 ﻿using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityProject.Controllers.Admin
+namespace Cinema.Controllers.Admin
 {
+    [Authorize]
     public class TypeController : Controller
     {
 
@@ -13,6 +15,7 @@ namespace IdentityProject.Controllers.Admin
             _MovieTypeRepository = MovieTypeRepository;
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 
@@ -21,7 +24,7 @@ namespace IdentityProject.Controllers.Admin
 
             return View("~/Views/Admin/Type/List.cshtml");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Add()
         {
@@ -30,9 +33,10 @@ namespace IdentityProject.Controllers.Admin
             return View("~/Views/Admin/Type/Add.cshtml");
         }
         [HttpPost]
-        public IActionResult Add(MovieType Type)
+        public IActionResult Add(MovieType type)
         {
-            bool result = _MovieTypeRepository.Create(Type);
+
+            bool result = _MovieTypeRepository.Create(type);
 
 
             return RedirectToAction("List", "Type", new { area = "" });

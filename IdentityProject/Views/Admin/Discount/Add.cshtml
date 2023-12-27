@@ -1,6 +1,9 @@
-﻿@model IdentityProject.Models.Discount;
+﻿@model IdentityProject.Models.Discount
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
+    Layout = "/Pages/Shared/AdminLayout.cshtml";
+
     <form method="POST" asp-controller="Discount" asp-action="Add">
 
         <div class="card-body">

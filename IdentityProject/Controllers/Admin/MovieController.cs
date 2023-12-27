@@ -1,6 +1,9 @@
 ﻿using IdentityProject.Context;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols;
@@ -10,6 +13,7 @@ using Movie = IdentityProject.Models.Movie;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class MovieController : Controller
     {
         private readonly IMovieRepository _MovieRepository;
@@ -20,6 +24,7 @@ namespace IdentityProject.Controllers.Admin
             _context = context;
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 
@@ -51,8 +56,8 @@ namespace IdentityProject.Controllers.Admin
                 mv_duration = TimeSpan.Parse(form["mv_duration"]),
                 mv_end = DateTime.Parse(form["mv_end"]),
                 mv_start = DateTime.Parse(form["mv_start"]),
-                mv_link_poster = form["mv_link_poster"],
-                mv_link_trailer = form["mv_link_trailer"],
+                mv_link_poster = "/template/upload/poster/" + (string)form["mv_link_poster"],
+                mv_link_trailer = "/template/upload/trailer/" + (string)form["mv_link_trailer"],
                 mv_restrict = form["mv_restrict"]
             };
 
@@ -104,6 +109,81 @@ namespace IdentityProject.Controllers.Admin
             ViewData["Title"] = "Danh sách phim";
 
             return RedirectToAction("List", "Movie", new { area = "" });
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public IActionResult StorePoster(IFormFile file, [FromServices] IWebHostEnvironment hostingEnvironment)
+        {
+            try
+            {
+                if (file != null && file.Length > 0)
+                {
+                    string filename = Path.GetFileName(file.FileName);
+
+                    string folderPath = Path.Combine(hostingEnvironment.WebRootPath, "template", "upload", "poster");
+                    string imagePath = Path.Combine(folderPath, filename);
+
+                    // Tạo thư mục nếu nó chưa tồn tại
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    using (var stream = new FileStream(imagePath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+
+                    // Trả về đường dẫn ảnh cho phía client
+                    return Json(new { success = true, imagePath = "/template/upload/poster/" + filename });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu có
+                return Json(new { success = false, errorMessage = ex.Message });
+            }
+
+            return Json(new { success = false, errorMessage = "Upload file poster lỗi trong Controller" });
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public IActionResult StoreTrailer(IFormFile file, [FromServices] IWebHostEnvironment hostingEnvironment)
+        {
+            try
+            {
+                if (file != null && file.Length > 0)
+                {
+                    string filename = Path.GetFileName(file.FileName);
+
+                    string folderPath = Path.Combine(hostingEnvironment.WebRootPath, "template", "upload", "trailer");
+                    string trailerPath = Path.Combine(folderPath, filename);
+
+                    // Tạo thư mục nếu nó chưa tồn tại
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    using (var stream = new FileStream(trailerPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+
+                    // Trả về đường dẫn file cho phía client
+                    return Json(new { success = true, trailerPath = "/template/upload/trailer/" + filename });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu có
+                return Json(new { success = false, errorMessage = ex.Message });
+            }
+
+            return Json(new { success = false, errorMessage = "Upload file trailer lỗi trong Controller" });
         }
     }
 }

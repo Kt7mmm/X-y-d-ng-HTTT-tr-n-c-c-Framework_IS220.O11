@@ -19,7 +19,18 @@ namespace IdentityProject.Repositories
 
         public bool Destroy(string id)
         {
-            throw new NotImplementedException();
+            int x = 0;
+            Int32.TryParse(id, out x);
+            Customer customer = _context.Customers.Find(x);
+            if (customer != null)
+            {
+                _context.Customers.Remove(customer);
+                int result = _context.SaveChanges();
+                if ((result) > 0)
+                    return true;
+                return false;
+            }
+            return false;
         }
 
         public async Task<IEnumerable<Customer>> GetAll()

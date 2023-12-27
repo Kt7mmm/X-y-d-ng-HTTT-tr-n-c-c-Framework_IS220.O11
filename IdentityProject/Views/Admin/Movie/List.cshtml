@@ -1,5 +1,7 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
+    Layout = "/Pages/Shared/AdminLayout.cshtml";
     <table class="table">
         <thead>
             <tr>
@@ -22,7 +24,7 @@
                     <td>@movie.mv_end</td>
                     <td>
                         <a href="@movie.mv_link_poster" target="_blank">
-                            <img src= "@movie.mv_link_poster height="40px">
+                            <img src="@movie.mv_link_poster" height="40px">
                         </a>
                     </td>
                     <td>

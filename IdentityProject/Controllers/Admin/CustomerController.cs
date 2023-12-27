@@ -1,8 +1,10 @@
 ﻿using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly ICustomerRepository _CustomerRepository;
@@ -10,7 +12,7 @@ namespace IdentityProject.Controllers.Admin
         {
             _CustomerRepository = CustomerRepository;
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

@@ -68,50 +68,52 @@ function removeRow3(id, id2, id3, url){
 }
 
 /* Upload file poster*/
-$('#upload_poster').change(function(){
-
-    const form = new FormData();
+$('#upload_poster').change(function () {
+    var form = new FormData();
     form.append('file', $(this)[0].files[0]);
 
     $.ajax({
         processData: false,
         contentType: false,
         type: 'POST',
-        dataType: 'JSON',
-        data: form, 
-        url: '/admin/movies/upload/poster',
-        success: function(results){
-            if (results.error == false){
-                $('#show_poster').html('<a href="' + results.url + '" target="_blank">' + 
-                    '<img src="' + results.url + '" width="100px"></a>');
+        data: form,
+        url: '/Movie/StorePoster',
+        success: function (result) {
+            if (result.success) {
+                // Hiển thị ảnh trên trang mà không làm tải lại
+                $('#show_poster').html('<a href="' + result.imagePath + '" target="_blank">' +
+                    '<img src="' + result.imagePath + '" width="100px"></a>');
 
-                $('#link_poster').val(results.url);
+                // Gán đường dẫn ảnh cho trường ẩn
+                $('#link_poster').val(result.imagePath);
+            } else {
+                alert("Upload File Poster Lỗi: " + result.errorMessage);
             }
-            else {
-                alert("Upload File Poster Lỗi");
-            }
+        },
+        error: function (error) {
+            alert("Upload File Poster Lỗi: " + error.statusText);
         }
     });
 });
 
+
 /* Upload file trailer*/
 $('#upload_trailer').change(function(){
 
-    const form = new FormData();
+    var form = new FormData();
     form.append('file', $(this)[0].files[0]);
 
     $.ajax({
         processData: false,
         contentType: false,
         type: 'POST',
-        dataType: 'JSON',
-        data: form, 
-        url: '/admin/movies/upload/trailer',
-        success: function(results){
-            if (results.error == false){
-                $('#show_trailer').html('<a href="' + results.url + '" target="_blank">Đường dẫn trailer</a>');
+        data: form,
+        url: '/Movie/StoreTrailer',
+        success: function (result) {
+            if (result.success) {
+                $('#show_trailer').html('<a href="' + results.trailerPath + '" target="_blank">Đường dẫn trailer</a>');
 
-                $('#link_trailer').val(results.url);
+                $('#link_trailer').val(results.trailerPath);
             }
             else {
                 alert("Upload File Trailer Lỗi");

@@ -39,7 +39,7 @@ namespace IdentityProject.Models
         [StringLength(500)]
         public string mv_link_trailer { get; set; }
 
-        [StringLength(500)]
+        [StringLength(7000)]
         public string mv_detail { get; set; }
     }
 }

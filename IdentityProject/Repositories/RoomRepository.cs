@@ -3,6 +3,7 @@ using IdentityProject.Context;
 using IdentityProject.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace IdentityProject.Repositories
 {
@@ -20,13 +21,27 @@ namespace IdentityProject.Repositories
 
         public bool Create(Room Room)
         {
-
+            string rid = Room.r_id;
             var newRoom = new Room()
             {
                 r_id = Room.r_id,
-                r_capacity = Room.r_capacity
+                //r_capacity = Room.r_capacity
+                r_capacity = 78
             };
             _context.Rooms.Add(newRoom);
+
+            for (int i = 1; i < 13; i++)
+            {
+                _context.Seats.Add(new Seat() { st_id = "A" + i.ToString(), r_id = rid, st_type = "standard" });
+                _context.Seats.Add(new Seat() { st_id = "B" + i.ToString(), r_id = rid, st_type = "standard" });
+                _context.Seats.Add(new Seat() { st_id = "C" + i.ToString(), r_id = rid, st_type = "standard" });
+                _context.Seats.Add(new Seat() { st_id = "D" + i.ToString(), r_id = rid, st_type = "vip" });
+                _context.Seats.Add(new Seat() { st_id = "E" + i.ToString(), r_id = rid, st_type = "vip" });
+                _context.Seats.Add(new Seat() { st_id = "F" + i.ToString(), r_id = rid, st_type = "vip" });
+            }
+            for (int i = 1; i < 7; i++) _context.Seats.Add(new Seat() { st_id = "G" + i.ToString(), r_id = rid, st_type = "sweetbox" });
+
+
             int result = _context.SaveChanges();
 
             if ((result) > 0)

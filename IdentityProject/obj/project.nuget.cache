@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oe+PnXX2BWbRxMblTHpoleYQ6TUEP0esySe3tk904DOHlAi0CYTr6zmh1bbqDUoyIJ4Ni/U3h6/4eaHGTb4+RA==",
+  "dgSpecHash": "siBgRM+uiir9lj6/pu4RjugoH/R+pz2D7m20C5v+QKD5IOx2PUcTqyMTh4v/PUPBSvIyKCBtcpUPPvGA/WvvRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\Cinema.csproj",
+  "projectFilePath": "D:\\FW MET\\IdentityProject\\IdentityProject\\Cinema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

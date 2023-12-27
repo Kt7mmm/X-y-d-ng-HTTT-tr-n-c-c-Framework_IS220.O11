@@ -17,7 +17,7 @@ namespace Cinema.Migrations
                 name: "Bills",
                 columns: table => new
                 {
-                    bi_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
+                    bi_id = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     cus_email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -93,7 +93,7 @@ namespace Cinema.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     mv_link_trailer = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    mv_detail = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false)
+                    mv_detail = table.Column<string>(type: "varchar(7000)", maxLength: 7000, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -153,7 +153,7 @@ namespace Cinema.Migrations
                 {
                     dis_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    bi_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
+                    bi_id = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -285,7 +285,7 @@ namespace Cinema.Migrations
                 name: "Tickets",
                 columns: table => new
                 {
-                    tk_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
+                    tk_id = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     sl_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -298,7 +298,7 @@ namespace Cinema.Migrations
                     tk_value = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     tk_type = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    bi_id = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
+                    bi_id = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     tk_available = table.Column<int>(type: "int", nullable: false)
                 },

@@ -1,9 +1,11 @@
 ﻿using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class DiscountController : Controller
     {
         private readonly IDiscountRepository _DiscountRepository;
@@ -11,7 +13,8 @@ namespace IdentityProject.Controllers.Admin
         {
             _DiscountRepository = DiscountRepository;
         }
-        
+
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

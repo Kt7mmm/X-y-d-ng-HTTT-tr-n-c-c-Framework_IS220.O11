@@ -21,7 +21,7 @@ namespace IdentityProject.Repositories
         public bool Create(MovieType type)
         {
 
-
+            
 
             var newType = new MovieType()
             {

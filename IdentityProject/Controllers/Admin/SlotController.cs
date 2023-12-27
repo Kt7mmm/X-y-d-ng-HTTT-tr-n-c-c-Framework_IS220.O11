@@ -1,10 +1,12 @@
 ﻿using IdentityProject.Context;
 using IdentityProject.Models;
 using IdentityProject.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityProject.Controllers.Admin
 {
+    [Authorize]
     public class SlotController : Controller
     {
         private readonly ISlotRepository _SlotRepository;
@@ -15,6 +17,7 @@ namespace IdentityProject.Controllers.Admin
             _context = context;
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> List()
         {
 

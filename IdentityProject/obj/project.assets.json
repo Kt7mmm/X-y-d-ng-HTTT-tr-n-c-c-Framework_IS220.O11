@@ -12477,11 +12477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\Cinema.csproj",
+      "projectUniqueName": "D:\\FW MET\\IdentityProject\\IdentityProject\\Cinema.csproj",
       "projectName": "Cinema",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\Cinema.csproj",
+      "projectPath": "D:\\FW MET\\IdentityProject\\IdentityProject\\Cinema.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\IdentityProject123\\IdentityProject\\IdentityProject\\obj\\",
+      "outputPath": "D:\\FW MET\\IdentityProject\\IdentityProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

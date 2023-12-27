@@ -1,11 +1,16 @@
-﻿@model IdentityProject.Models.MovieType;
+﻿@model IdentityProject.Models.MovieType
+@using Microsoft.AspNetCore.Identity
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @section AdminHead{
     <script src="/ckeditor/ckeditor.js"></script>
 }
 
 @{
+    Layout = "/Pages/Shared/AdminLayout.cshtml";
 
+
+    
     <form method="POST" asp-controller="Type" asp-action="Add">
 
         <div class="card-body">
@@ -13,8 +18,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label asp-for="type_id">ID</label>
-                        <input asp-for="type_id" type="text" placeholder="Nhập ID thể loại phim">
+                        <label name="type_id">ID</label>
+                        <input name ="type_id" type="text" placeholder="Nhập ID thể loại phim">
 
                     </div>
                 </div>
@@ -23,8 +28,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label asp-for="type_name">Tên Thể Loại</label>
-                        <input asp-for="type_name" type="text" placeholder="Nhập tên thể loại phim">
+                        <label name="type_name">Tên Thể Loại</label>
+                        <input name="type_name" type="text" placeholder="Nhập tên thể loại phim">
                     </div>
                 </div>
             </div>
@@ -36,14 +41,6 @@
         </div>
 
     </form>
+    
 }
 
-@section AdminFooter{
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#content'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-}

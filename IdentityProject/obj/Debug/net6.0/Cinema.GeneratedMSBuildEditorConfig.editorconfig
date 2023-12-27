@@ -9,401 +9,461 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Cinema
 build_property.RootNamespace = Cinema
-build_property.ProjectDir = C:\Users\Admin\Desktop\IdentityProject123\IdentityProject\IdentityProject\
+build_property.ProjectDir = D:\FW MET\IdentityProject\IdentityProject\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\IdentityProject123\IdentityProject\IdentityProject
+build_property.MSBuildProjectDirectory = D:\FW MET\IdentityProject\IdentityProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Lockout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/Error.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Error.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Index.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Privacy.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/AdminAlert.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminAlert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluQWxlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/AdminFooter.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/AdminHead.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminHead.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluSGVhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/AdminSlidebar.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminSlidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluU2xpZGViYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/Error.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/_authLayout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/UserAlert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFVzZXJBbGVydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/UserFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFVzZXJGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/UserHead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFVzZXJIZWFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFVzZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/_authLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9hdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/_LoginPartial.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/_ViewImports.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/_ViewStart.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Bill/Detail.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Bill/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmlsbFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Bill/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Bill/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmlsbFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Customer/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Customer/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VzdG9tZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Discount/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Discount/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzY291bnRcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Discount/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Discount/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzY291bnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Discount/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Discount/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzY291bnRcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Home.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Main/Index.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Main/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Movie/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Movie/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Movie/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Movie/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Movie/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Movie/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Revenue/LineChart_Month.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Revenue/LineChart_Month.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV2ZW51ZVxMaW5lQ2hhcnRfTW9udGguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Revenue/LineChart_Year.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Revenue/LineChart_Year.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV2ZW51ZVxMaW5lQ2hhcnRfWWVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Revenue/Month.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Revenue/Month.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV2ZW51ZVxNb250aC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Revenue/Year.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Revenue/Year.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV2ZW51ZVxZZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Room/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Room/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9vbVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Room/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Room/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9vbVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Room/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Room/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9vbVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Seat/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Seat/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhdFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Seat/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Seat/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Seat/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Seat/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Slot/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Slot/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2xvdFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Slot/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Slot/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2xvdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Slot/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Slot/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2xvdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Ticket/Detail.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Ticket/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGlja2V0XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Ticket/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Ticket/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGlja2V0XExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Type/Add.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Type/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHlwZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Type/Edit.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Type/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHlwZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Admin/Type/List.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Admin/Type/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHlwZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/adminDashboard.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/adminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZG1pbkRhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/AdminAlert.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/AdminAlert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcQWRtaW5BbGVydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/AdminFooter.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/AdminFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcQWRtaW5Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/AdminHead.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/AdminHead.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcQWRtaW5IZWFkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/AdminSlidebar.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/AdminSlidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcQWRtaW5TbGlkZWJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/Error.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/_authLayout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/_authLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX2F1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/_LoginPartial.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX0xvZ2luUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/_ValidationScriptsPartial.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/userDashboard.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/userDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx1c2VyRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/_ViewImports.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/_ViewStart.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/AdminLayout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Payment/PaymentFailed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50RmFpbGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/Payment/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50U3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Film_cm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGaWxtX2NtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Film_detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGaWxtX2RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Film_rc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGaWxtX3JjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Views/User/PaymentReturn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXltZW50UmV0dXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-q625uv45tf
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Pages/Shared/_Layout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6yfbvj7ypf
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/AdminLayout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-20tnt6gri4
 
-[C:/Users/Admin/Desktop/IdentityProject123/IdentityProject/IdentityProject/Views/Home/Shared/_Layout.cshtml]
+[D:/FW MET/IdentityProject/IdentityProject/Views/Home/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-0nr7mq1t8k

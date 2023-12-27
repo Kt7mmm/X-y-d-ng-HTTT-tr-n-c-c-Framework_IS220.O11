@@ -1,0 +1,367 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.Identity
+@using IdentityProject.Areas.Identity.Data
+@using System.Text.Json;
+@using Slot = IdentityProject.Models.Slot;
+@using IdentityProject.Context;
+
+
+@inject SignInManager<IdentityProjectUser> SignInManager
+@inject UserManager<IdentityProjectUser> UserManager
+
+@section head{
+
+    <link rel="stylesheet" href="~/css/payment.css">
+}
+
+@{
+    var user = await UserManager.GetUserAsync(Context.User);
+    // var user = ViewData["User"] as IdentityProjectUser;
+
+    Layout = "~/Views/Home/Shared/_Layout.cshtml";
+    var movie = ViewData["Movie"] as IdentityProject.Models.Movie;
+    var seatsJson = ViewData["Seats"] as string;
+
+    var seatsArray = JsonSerializer.Deserialize<string[]>(seatsJson);
+
+    var total = @ViewData[" Totalpay"];
+
+    var slot = ViewData["Slot"] as IdentityProject.Models.Slot;
+    var slotid=slot.sl_id;
+    var slottime = slot.sl_start;
+    var slotprice = slot.sl_price;
+
+    
+    var countseat = @ViewData["Count"];
+    var roomid = @ViewData["Room"];
+}
+
+    <section class="booking-body">
+        <div class="top-content">
+            <table class="text-center">
+                <tr>
+                    <td>
+                        <span class="form-header--unselected ">CHỌN VÉ</span>
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="56" viewBox="0 0 32 56"
+                            fill="none">
+                            <path d="M2 54L29.2108 28.7328C29.6369 28.3372 29.6369 27.6628 29.2108 27.2672L16 15L2 2"
+                                stroke="black" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </td>
+                    <td>
+                        <span class="form-header--selected ">THANH TOÁN</span>
+                    </td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="56" viewBox="0 0 32 56"
+                            fill="none">
+                            <path d="M2 54L29.2108 28.7328C29.6369 28.3372 29.6369 27.6628 29.2108 27.2672L16 15L2 2"
+                                stroke="black" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </td>
+                    <td>
+                        <span class="form-header--unselected ">HOÀN TẤT</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Thông tin thanh toán-->
+        <div class="container">
+            <div class="left-content">
+                <div class="info-filled">
+                    <span>THÔNG TIN NGƯỜI NHẬN VÉ</span><br>
+                    <table>
+                        <tr colspan="2">
+                            <td>
+                                <label for="name">
+                                    <p class="label">Họ và tên: <span class="required">*</span></p>
+                                </label>
+@*                                 <h1>@user.Email</h1>
+ *@                                
+                                @if (user!=null)
+                                {
+                                  
+                                    <input id="name" type="text" class="fill" name="name"
+                                           value="@user.cus_name">
+                                }
+                                else
+                                {
+                                    //guest
+                                    <input id="name" type="text" class="fill" name="name"
+                                           placeholder="Nhập họ tên">
+                                }
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="phone">
+                                    <p class="label">SĐT: <span class="required">*</span></p>
+                                </label>
+
+                                @if (user != null)
+                                {
+                                //login
+                                    <input id="phone" type="text" class="fill" name="phonenum"
+                                           value="@user.cus_phone">
+                                }
+                                else
+                                {
+                                //guest
+                                    <input id="phone" type="text" class="fill" name="phonenum"
+                                           placeholder="Nhập số điện thoại">
+                                }
+                            </td>
+                            <td>
+                                <label for="email">
+                                    <p class="label">Email: <span class="required">*</span></p>
+                                </label>
+
+                            @if (user != null)
+                            {
+                                //login
+                                    <input id="email" type="text" class="fill" name="email"
+                                           value="@user.Email">
+                                }
+                                else
+                                {
+                                //guest
+                                    <input id="email" type="text" class="fill" name="email"
+                                           placeholder="Nhập email của bạn" style="width: 300px;">
+                                }
+                            </td>
+                            <h1>@slottime</h1>
+                        </tr>
+                    </table>
+                </div>
+                <div class="payment-method">
+                    <span>HÌNH THỨC THANH TOÁN</span><br>
+                    <hr>
+                    <input type="radio" class="round" id="paypal" name="payment" value="Paypal">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <label for="paypal" class="payment-label">Thanh toán thông qua Paypal</label>
+                    <br>
+
+                    <input type="radio" class="round" id="vnpay" name="payment" value="VNPay">
+                    <img src="~images/invoice/vnpay.jpg" style="width: 20px;" alt="">
+                    <label for="vnpay" class="payment-label">Thanh toán bằng VNPay</label>
+                    <br>
+
+                    <input type="radio" class="round" id="momo" name="payment" value="Momo">
+                    <img src="~images/invoice/momo.png" style="width: 20px;" alt="">
+                    <label for="momo" class="payment-label">Thanh toán trực tuyến MoMo</label>
+                    <br>
+                </div>
+            </div>
+            <div class="right-content">
+             <form action="/Payment/getPay" method="POST" class="info-show">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="text-align: left;">
+                                <span>THÔNG TIN NGƯỜI NHẬN VÉ</span>
+                                <hr>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left"><i class="fa-solid fa-user"></i><label>Họ tên</label></td>
+                            <td class="text-right"><span id="nameSpan"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><i class="fa-solid fa-envelope"></i><label>Email</label></td>
+                            <td class="text-right"><span id="emailSpan"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><i class="fa-solid fa-phone"></i><label>Điện thoại</label></td>
+                            <td class="text-right"><span id="phoneSpan"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="text-align: left;">
+                                <span>HÌNH THỨC THANH TOÁN</span>
+                                <hr>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                                <td>
+                                    <h4 id="pay by" name="pay by"></h4>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="text-align: left;">
+                                    <span class="description">THÔNG TIN ĐẶT VÉ</span>
+                                    <hr>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <p>Ghế</p>
+                                </td>
+                                <td class="text-right">
+                                    <p>Số lượng</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left" name="seats">
+                                <span>
+                                        @{
+                                            
+                                                var count = seatsArray.Length;
+                                                var index = 0;
+                                                foreach (var seat in seatsArray)
+                                                {
+                                                        @seat
+                                                    if (++index != count)
+                                                    {
+                                                            @:,
+                                                    }
+                                                }
+                                            
+                                        }
+
+                                    </span>
+                                </td>
+                                <td class="text-right" name="num_seats"><span>
+                                        @ViewData["Count"]
+                                </span></td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tổng cộng</strong></td>
+                            <td class="text-right"><strong>
+                                    <span>
+                                            @ViewData["Totalpay"]
+                                    </span>
+                                    <span>VND</span>
+                                </strong></td>
+                        </tr>
+                    </tbody>
+                
+                    <button id="submit-button" type="submit" name="redirect" value="submit"
+                            style="display: none;">
+                        HOÀN TẤT
+                    </button>
+                       
+                        <input type="hidden" name="total_payment" value="@total">
+                        <input type="hidden" name="count" value="@countseat">
+                        <input type="hidden" name="hidden_email"
+                               value="@user?@user.Email":'' "">
+
+
+                        <input type="hidden" name="slotid" value="@slotid">
+                    <input type="hidden" id="slottimeInput" name="slottime" value="@slottime">
+                    <input type="hidden" name="slotprice" value="@slotprice">
+
+
+                        <input type="hidden" name="seats" value="@seatsArray">
+                    <input type="hidden" name="movieid" value="@movie.mv_id">
+                        <input type="hidden" name="moviename" value="@movie.mv_name">
+
+                        <input type="hidden" name="roomid" value="@roomid">
+
+
+                    </table>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="sbm-btn"><button type="submit" name="submit" value="submit">HOÀN TẤT</button></div>
+        <div class="bottom-content">
+            <div class="format-bg-top"></div>
+            <div class="minicart-wrapper">
+                <ul>
+                    <li class="item">
+                        <div class="product-detail">
+                            <table class="info-wrapper">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="@movie.mv_link_poster" alt="@movie.mv_id">
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-detail">
+                            <table class="info-wrapper">
+                                <tbody>
+                                    <tr>
+                                        <td class="label" colspan="2">
+                                            @movie.mv_name
+                                            <tr>
+                                        <td class="label">Suất chiếu</td>
+                                        <div id="time"></div>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Ngày:</td>
+                                        <td>
+                                            <div id="date"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Rạp:</td>
+                                        <td> @roomid </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-detail">
+                            <table class="info-wrapper">
+                                <tr><td class="label">THỜI GIAN GIỮ GHẾ</td></tr>
+                                <tr><td><span id="timer"></span></td></tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="format-bg-bottom"></div>
+        </div>
+    </section>
+
+@section Scripts {
+
+    <script src="~/js/invoice.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var slottimeInput = document.getElementById('slottimeInput');
+            var slottime = slottimeInput.value;
+
+            var dateTime = new Date(slottime);
+
+            var time = dateTime.toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            var date = dateTime.toLocaleDateString();
+
+            document.getElementById('time').innerHTML = time;
+            document.getElementById('date').innerHTML = date;
+        });
+    </script>
+}
