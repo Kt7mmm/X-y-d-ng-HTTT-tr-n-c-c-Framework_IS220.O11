@@ -9149,8 +9149,16 @@
       "PackagePath": "staticwebassets\\template\\upload\\poster\\Avatar _ Official Trailer (HD) _ 20th Century FOX.mp4"
     },
     {
+      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\poster\\HP1.jpg",
+      "PackagePath": "staticwebassets\\template\\upload\\poster\\HP1.jpg"
+    },
+    {
       "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\poster\\WONKA.jpg",
       "PackagePath": "staticwebassets\\template\\upload\\poster\\WONKA.jpg"
+    },
+    {
+      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\poster\\hp2.jpg",
+      "PackagePath": "staticwebassets\\template\\upload\\poster\\hp2.jpg"
     },
     {
       "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\poster\\meo-cam-dao.jpg",
@@ -9165,16 +9173,8 @@
       "PackagePath": "staticwebassets\\template\\upload\\poster\\poster.jpg"
     },
     {
-      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\trailer\\WONKA _ Official Trailer.mp4",
-      "PackagePath": "staticwebassets\\template\\upload\\trailer\\WONKA _ Official Trailer.mp4"
-    },
-    {
-      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\trailer\\Wish _ Official Trailer.mp4",
-      "PackagePath": "staticwebassets\\template\\upload\\trailer\\Wish _ Official Trailer.mp4"
-    },
-    {
-      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\trailer\\trailer.mp4",
-      "PackagePath": "staticwebassets\\template\\upload\\trailer\\trailer.mp4"
+      "Id": "D:\\FW MET\\IdentityProject\\IdentityProject\\wwwroot\\template\\upload\\poster\\wish.jpg",
+      "PackagePath": "staticwebassets\\template\\upload\\poster\\wish.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Cinema.Microsoft.AspNetCore.StaticWebAssets.props",

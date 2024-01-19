@@ -29,7 +29,7 @@ namespace Cinema.Services
             vnpay.AddRequestData("vnp_OrderType", "other"); //default value: other
             vnpay.AddRequestData("vnp_ReturnUrl", _config["VnPay:PaymentBackReturnURL"]);
 
-            vnpay.AddRequestData("vnp_TxnRef", tick); // Mã tham chiếu của giao dịch tại hệ thống của merchant. Mã này là duy nhất dùng để phân biệt các đơn hàng gửi sang VNPAY. Không được trùng lặp trong ngày
+            vnpay.AddRequestData("vnp_TxnRef", model.bi_id); // Mã tham chiếu của giao dịch tại hệ thống của merchant. Mã này là duy nhất dùng để phân biệt các đơn hàng gửi sang VNPAY. Không được trùng lặp trong ngày
 
             var paymentURL = vnpay.CreateRequestUrl(_config["VnPay:BaseUrl"], _config["VnPay:HashSecret"]);
 
@@ -49,12 +49,16 @@ namespace Cinema.Services
                  }
 
             }
-            var vnp_orderID = Convert.ToInt64(vnpay.GetResponseData("vnp_TxnRef"));
+            var vnp_amount = Convert.ToInt64(vnpay.GetResponseData("vnp_Amount"));
+            //var vnp_orderID = Convert.ToInt64(vnpay.GetResponseData("vnp_TxnRef"));
+            var vnp_orderID = vnpay.GetResponseData("vnp_TxnRef");
+
             var vnp_TransactionID = Convert.ToInt64(vnpay.GetResponseData("vnp_TransactionNo"));
 
             var vnp_SecureHash = collections.FirstOrDefault(p => p.Key == "vnp_SecureHash").Value;
             var vnp_ResponseCode = vnpay.GetResponseData("vnp_ResponseCode");
             var vnp_OrderInfo = vnpay.GetResponseData("vnp_OrderInfo");
+            
             bool checkSignature = vnpay.ValidateSignature(vnp_SecureHash, _config["VnPay:HashSecret"]);
 
             if (!checkSignature)
@@ -72,7 +76,7 @@ namespace Cinema.Services
                 VnPayResponseCode = vnp_ResponseCode,
                 TransactionId = vnp_TransactionID.ToString(),
                 OrderId = vnp_orderID.ToString(),
-
+                orderAmount = (decimal)vnp_amount
 
             };
         }

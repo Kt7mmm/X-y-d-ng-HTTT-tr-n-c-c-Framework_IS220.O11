@@ -8,7 +8,8 @@
         public string TransactionId { get; set; }
         public string Token { get; set; }
         public string VnPayResponseCode { get; set; }
-
+       
+        public decimal orderAmount { get; set; }
     }
     public class VnPaymentRequestModel
     {
@@ -19,6 +20,7 @@
 
         public DateTime bi_date { get; set; }
 
+        
 
 
     }

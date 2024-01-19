@@ -24,7 +24,7 @@
 
     var seatsArray = JsonSerializer.Deserialize<string[]>(seatsJson);
 
-    var total = @ViewData[" Totalpay"];
+    var total = @ViewData["Totalpay"];
 
     var slot = ViewData["Slot"] as IdentityProject.Models.Slot;
     var slotid=slot.sl_id;
@@ -219,11 +219,12 @@
                             <tr>
                                 <td class="text-left" name="seats">
                                 <span>
-                                        @{
+                                    @{
+                                        int i = 0;
                                             
                                                 var count = seatsArray.Length;
                                                 var index = 0;
-                                                foreach (var seat in seatsArray)
+                                        foreach (var seat in seatsArray)
                                                 {
                                                         @seat
                                                     if (++index != count)
@@ -233,7 +234,12 @@
                                                 }
                                             
                                         }
-
+                                    @foreach (var e in seatsArray)
+                                    {
+                                        <input type="hidden" name="data[@i]" value=@e />
+                                        i++;
+                                    }
+                                    <input type="hidden" name="length" value=@count />
                                     </span>
                                 </td>
                                 <td class="text-right" name="num_seats"><span>
@@ -263,7 +269,7 @@
                         <input type="hidden" name="total_payment" value="@total">
                         <input type="hidden" name="count" value="@countseat">
                         <input type="hidden" name="hidden_email"
-                               value="@user?@user.Email":'' "">
+                               value="@user.Email">
 
 
                         <input type="hidden" name="slotid" value="@slotid">
@@ -271,7 +277,7 @@
                     <input type="hidden" name="slotprice" value="@slotprice">
 
 
-                        <input type="hidden" name="seats" value="@seatsArray">
+                    <input type="hidden" name="seats" value="@seatsJson">
                     <input type="hidden" name="movieid" value="@movie.mv_id">
                         <input type="hidden" name="moviename" value="@movie.mv_name">
 

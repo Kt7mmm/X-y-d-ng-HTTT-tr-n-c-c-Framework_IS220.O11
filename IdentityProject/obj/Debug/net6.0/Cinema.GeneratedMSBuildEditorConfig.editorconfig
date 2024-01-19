@@ -408,8 +408,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FW MET/IdentityProject/IdentityProject/Views/Payment/PaymentFailed.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50RmFpbGVkLmNzaHRtbA==
+[D:/FW MET/IdentityProject/IdentityProject/Views/Payment/PaymentFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50RmFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FW MET/IdentityProject/IdentityProject/Views/Payment/PaymentSuccess.cshtml]
@@ -446,10 +446,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FW MET/IdentityProject/IdentityProject/Views/User/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNZW51LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FW MET/IdentityProject/IdentityProject/Views/User/PaymentReturn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXltZW50UmV0dXJuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FW MET/IdentityProject/IdentityProject/Pages/Shared/AdminLayout.cshtml]

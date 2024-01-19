@@ -123,168 +123,16 @@ namespace Cinema.Controllers.User
 
         [Authorize(Roles = "Admin,User")]
 
-        //[HttpPost]
-        //public async Task<IActionResult> getInvoice(IFormCollection form)
-        //{
-
-        //    //var user = await _userManager.GetUserAsync(User);
-        //    //ViewData["User"] = user;
-        //    //ViewData["UserEmail"] = user.Email;
-        //    //ViewData["UserPhone"] = user.cus_phone;
-        //    //ViewData["UserName"] = user.cus_name;
-
-
-        //    string[] seats = Request.Form["tickets[]"].ToArray();
-
-        //    string slot = (string)form["slot"];
-        //    string room = (string)form["room"];
-        //    string movieid = form["movieid"];
-        //    Movie movie = _context.Movies.Where(s => s.mv_id == movieid).First();
-
-        //    float totalpay = float.Parse(form["totalpay"]);
-        //    int count = seats.Length;
-
-        //    bool check = true;
-
-        //    if (seats == null)
-        //    {
-        //        TempData["ErrorMessage"] = "Vui lòng đặt ghế trước khi thanh toán !";
-
-        //        RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //    }
-
-        //    foreach (string seat in seats)
-        //    {
-
-        //        switch (seat)
-        //        {
-        //            case "A2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "A1").Any())
-        //                    && !(this.checkSeat(seats, "A1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng A1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "B2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "B1").Any())
-        //                    && !(this.checkSeat(seats, "B1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng B1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "C2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "C1").Any())
-        //                    && !(this.checkSeat(seats, "C1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng C1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "D2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "D1").Any())
-        //                    && !(this.checkSeat(seats, "D1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng D1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "E2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "E1").Any())
-        //                    && !(this.checkSeat(seats, "E1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng E1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "F2":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "F1").Any())
-        //                    && !(this.checkSeat(seats, "F1")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng F1";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "A11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "A12").Any())
-        //                    && !(this.checkSeat(seats, "A12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng A12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "B11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "B12").Any())
-        //                    && !(this.checkSeat(seats, "B12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng B12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "C11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "C12").Any())
-        //                    && !(this.checkSeat(seats, "C12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng C12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "D11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "D12").Any())
-        //                    && !(this.checkSeat(seats, "D12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng D12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "E11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "E12").Any())
-        //                    && !(this.checkSeat(seats, "E12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng E12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //            case "F11":
-        //                if (!(_context.Tickets.Where(s => s.sl_id == slot).Where(s => s.st_id == "F12").Any())
-        //                    && !(this.checkSeat(seats, "F12")))
-        //                {
-        //                    TempData["ErrorMessage"] = "Không được để trống ghế trong cùng F12";
-
-        //                    return RedirectToAction("getBooking", "UserMain", new { area = "", id = movieid });
-        //                }
-        //                break;
-        //        }
-        //    }
-
-        //    ViewData["Title"] = "Thanh toán hóa đơn";
-        //    ViewData["Seats"] = JsonSerializer.Serialize(seats); ;
-        //    ViewData["Slot"] = slot;
-        //    ViewData["Room"] = room;
-        //    ViewData["Movie"] = movie;
-        //    ViewData["Totalpay"] = totalpay;
-        //    ViewData["Count"] = count;
-
-        //    return View("~/Views/User/Invoice.cshtml");
-        //}
+    
+        
         public IActionResult getInvoice(IFormCollection form)
         {
 
 
 
             string[] seats = Request.Form["tickets[]"].ToArray();
+            Console.WriteLine(seats);
+
 
             string slot = (string)form["slot"];
             Slot slots = _context.Slots.Where(s => s.sl_id == slot).First();
@@ -421,7 +269,8 @@ namespace Cinema.Controllers.User
             }
 
             ViewData["Title"] = "Thanh toán hóa đơn";
-            ViewData["Seats"] = JsonSerializer.Serialize(seats); ;
+            ViewData["seats"] = JsonSerializer.Serialize(seats); ;
+            //ViewData["Seats"] = seats;
             ViewData["Slot"] = slots;
             ViewData["Room"] = room;
             ViewData["Movie"] = movie;

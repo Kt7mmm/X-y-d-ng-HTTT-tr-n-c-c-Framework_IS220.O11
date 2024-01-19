@@ -56,7 +56,7 @@
                         <td><p class="label">Mã đơn hàng:</p></td>
                         <td>
                             <span id="bi_id">
-
+                                @ViewData["billid"]
                             </span></span>
                         </td>
                     </tr>
@@ -64,7 +64,7 @@
                         <td><p class="label">Tên phim:</p></td>
                         <td>
                             <span id="mv_name">
-
+                                @ViewData["movieName"]
                             </span>
                         </td>
                     </tr>
@@ -72,6 +72,7 @@
                         <td><p class="label">Suất chiếu:</p></td>
                         <td>
                             <span id="sl_id">
+                                @ViewData["slStart"]
 
                             </span>
                         </td>
@@ -80,6 +81,7 @@
                         <td><p class="label">Phòng:</p></td>
                         <td>
                             <span id="r_id">
+                                @ViewData["roomId"]
 
                             </span>
                         </td>
@@ -88,7 +90,8 @@
                         <td><p class="label">Số ghế:</p></td>
                         <td>
                             <span id="st_id">
-                        
+                                @ViewData["seatIdsJson"]
+
                             </span>
                         </td>
                     </tr>
@@ -96,6 +99,8 @@
                         <td><p class="label">Thời gian thanh toán:</p></td>
                         <td>
                             <span id="bi_date">
+                                @ViewData["transactionDate"]
+
                             </span>
                         </td>
                     </tr>
@@ -103,6 +108,9 @@
                         <td><p class="label">Tổng tiền:</p></td>
                         <td>
                             <span id="bi_value">
+                                @ViewData["total"]
+
+                            </span>
                     </tr>
                 </table>
             </div>
